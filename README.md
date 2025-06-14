@@ -1,2 +1,0 @@
-# projectsbyayushi
-Author - Ayushi Abhishek
