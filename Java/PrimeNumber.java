@@ -1,17 +1,19 @@
+import java.util.Scanner;
+
 public class PrimeCheck {
-    public static void main(String[] args) {
-        int n = 29;
-        boolean isPrime = true;
 
-        if(n <= 1) isPrime = false;
+    public static boolean isPrime(int n){
+        if(n<=1) return false;
+        for(int i=2;i<=Math.sqrt(n);i++)
+            if(n%i==0) return false;
+        return true;
+    }
 
-        for(int i = 2; i <= Math.sqrt(n); i++) {
-            if(n % i == 0) {
-                isPrime = false;
-                break;
-            }
-        }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num=sc.nextInt();
 
-        System.out.println(isPrime ? "Prime" : "Not Prime");
+        System.out.println(isPrime(num)?"Prime":"Not Prime");
     }
 }
