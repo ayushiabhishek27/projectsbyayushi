@@ -1,13 +1,22 @@
-public class PalindromeNumber {
-    public static void main(String[] args) {
-        int num = 121, original = num, rev = 0;
+import java.util.Scanner;
 
-        while(num != 0){
-            int digit = num % 10;
-            rev = rev * 10 + digit;
-            num /= 10;
+public class Fibonacci {
+
+    public static void fibonacci(int n){
+        int a=0,b=1;
+        for(int i=1;i<=n;i++){
+            System.out.print(a+" ");
+            int next=a+b;
+            a=b;
+            b=next;
         }
+    }
 
-        System.out.println(original == rev ? "Palindrome" : "Not Palindrome");
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter terms: ");
+        int n=sc.nextInt();
+
+        fibonacci(n);
     }
 }
